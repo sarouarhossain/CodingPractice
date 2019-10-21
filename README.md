@@ -2,5 +2,6 @@
 
 To execute a C++ program from bash:
 
-g++ StackArray.cpp -o StackArray
+g++ program_name.cpp -o program_name
+./program_name
 
