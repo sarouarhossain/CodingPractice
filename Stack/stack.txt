@@ -1,0 +1,32 @@
+Stack, Queue, LinkedList, Array, Map => Collections of Data
+
+Stack -> LIFO[last in first out]
+
+
+Queue -> FIFO[first in first out]
+
+
+
+Map -> Data mapping
+
+1 -> XX
+2 -> YY
+3 -> ZZ
+4 -> TT
+
+
+LinkedList -> 1
+
+
+
+Stack
+---------------------
+1. Size
+2. Top
+3. Create()
+4. isFull()
+5. Push()
+6. isEmpty()
+7. Pop()
+8. peek()
+9. display()
