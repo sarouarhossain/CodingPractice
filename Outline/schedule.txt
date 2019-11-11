@@ -1,0 +1,17 @@
+==========================
+2019-11-11 ~ 2019-11-15
+==========================
+
+-> Pointer
+-> Stack
+-> CompletionStage/CompletableFuture
+-> Site reliability engineering
+
+==========================
+2019-11-16 ~ 2019-11-22
+==========================
+
+-> LinkedList
+-> Site reliability engineering
+-> Unit Test
+-> ELM
