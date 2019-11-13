@@ -1,0 +1,2 @@
+/Users/sarouarhossain/Documents/PRACTICE/CodingPractice/GO_LEARN
+export GOPATH=”/Users/sarouarhossain/Documents/PRACTICE/CodingPractice/GO_LEARN”

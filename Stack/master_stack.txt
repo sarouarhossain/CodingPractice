@@ -1,0 +1,19 @@
+
+Select anyone by number to test:
+
+1. Parenthesis match test (if matched output will be "yes matched", or "no does not match")
+2. Infix to postfix convert (output will be converted string)
+3. Postfix to Infix convert (output will be converted string)
+4. Infix to Prefix convert (output will be converted string)
+5. Prefix to Infix convert (output will be converted string)
+6. Prefix to Postfix convert (output will be converted string)
+7. Postfix to Prefix convert (output will be converted string)
+
+user will input the number , take the number from 1 to 7, and take input string
+
+if there is something wrong with the string , output will be wrong string given
+
+Input String: input_string
+
+Output: output_string
+
