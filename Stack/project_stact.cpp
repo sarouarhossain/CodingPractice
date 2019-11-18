@@ -1,7 +1,18 @@
+#include<iostream>
 #include <stdio.h>
 #include <string>
 
-void parenthesisCheck(std::string input);
+struct Node
+{
+	char data;
+	struct Node *next;
+}*top=NULL;
+
+
+void push(char x);
+char pop();
+void display();
+int parenthesisCheck(std::string input);
 void infixToPostFix(std::string input);
 void postfixToInfix(std::string input);
 void infixToPrefix(std::string input);
@@ -26,10 +37,16 @@ int main(){
 	scanf("%d",&testOption);
 
 	std::string input;
+	std::cout<<"please input your expression:"<<std::endl;
+	std::cin>>input;
 
 	switch(testOption) {
 		case 1: 
-			parenthesisCheck("parenthesisCheck");
+			if(parenthesisCheck(input) == 1){
+				printf("balanced\n");
+			}else{
+				printf("not balanced\n");
+			}
 			break;
 		case 2: 
 			infixToPostFix("infixToPostFix");
@@ -56,8 +73,82 @@ int main(){
 	goto START;
 }
 
-void parenthesisCheck(std::string input){
-	printf("%s\n", input.c_str());
+void push(char x) {
+	struct Node *temp;
+	temp = (struct Node*)malloc(sizeof(struct Node));
+
+	if(temp == NULL){
+		printf("stack overflow\n");
+	}else{
+		temp->data = x;
+		temp->next = top;
+		top = temp;
+	}
+}
+
+char pop() {
+	struct Node *temp;
+	char x = -1;
+
+	if(top == NULL) {
+		printf("our stack is empty\n");
+	}
+
+	else{
+		temp = top;
+		top = top->next;
+		x = temp->data;
+		free(temp);
+	}
+
+	return x;
+}
+
+void display(){
+	struct Node *p;
+	p=top;
+	while(p!=NULL){
+		std::cout<< p->data ;
+		p = p->next;
+	}
+	std::cout<<std::endl;
+}
+
+int parenthesisCheck(std::string input){
+	int i = 0;
+	char t;
+
+	for (int i = 0; input[i] != '\0'; i++)
+	{
+		if(input[i] == '(' || input[i] == '{' || input[i] == '['){
+			push(input[i]);
+			//display();
+		}else if(input[i] == ')' || input[i] == '}' || input[i] == ']'){
+			if(top == NULL){
+				return 0;
+			}else{
+				t = pop();
+				//display();
+				if(input[i] == ')' && t != '('){
+					return 0;
+				}
+
+				if(input[i] == '}' && t != '{'){
+					return 0;
+				}
+
+				if(input[i] == ']' && t != '['){
+					return 0;
+				}
+			}
+		}
+	}
+
+	std::cout<<"debug:"<<top<<std::endl;
+
+	if(top == NULL){
+		return 1;
+	}else return 0;
 }
 
 void infixToPostFix(std::string input){
