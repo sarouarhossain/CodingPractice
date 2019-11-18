@@ -1,0 +1,37 @@
+Language : 
+===============
+1. Java
+2. GO
+3. Python
+4. JavaScript
+
+DevOps :
+=============
+1. Linux *
+2. Docker
+3. AWS/GCP
+4. Kubernates
+
+Algorithm/DataStructure :
+=========================
+1. Data Structure *
+2. Algorithm *
+
+Frameworks :
+=============
+1. SpringBoot framework
+2. Play Framework
+3. React/Redux
+
+Books :
+=============
+1. Design Patterns
+2. Startup
+
+Technology :
+==============
+1. RDBMS *
+2. NoSql/MongoDB *
+3. Rest API
+4. Graph API
+
