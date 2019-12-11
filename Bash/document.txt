@@ -1,0 +1,3 @@
+/Users/sarouarhossain/Documents/PRACTICE/CodingPractice/Bash/test
+
+* * * * * echo "hello world" >> ~/Documents/PRACTICE/CodingPractice/Bash/test/test_1.txt
